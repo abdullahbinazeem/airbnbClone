@@ -5,6 +5,8 @@ import Container from "./components/Container";
 import EmptyState from "./components/EmptyState";
 import ListingCard from "./components/listings/ListingCard";
 
+import ClientOnly from "./components/ClientOnly";
+
 export default async function Home() {
   const listings = await getListings();
   const currentUser = await getCurrentUser();
