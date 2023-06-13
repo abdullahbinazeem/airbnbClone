@@ -25,6 +25,7 @@ export default async function Home() {
         lg:grid-cols-4 
         xl:grid-cols-5 
         2xl:grid-cols-6
+        gap-8
       "
       >
         {listings.map((listing: any) => {
