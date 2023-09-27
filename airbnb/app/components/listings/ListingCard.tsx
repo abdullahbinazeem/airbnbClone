@@ -3,8 +3,7 @@
 import useCountries from "@/app/hooks/useCountries";
 import HeartButton from "../HeartButton";
 
-import { SafeLising, SafeUser } from "@/app/types";
-import { Listing, Reservation } from "@prisma/client";
+import { SafeListing, SafeReservation, SafeUser } from "@/app/types";
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -13,8 +12,8 @@ import { format } from "date-fns";
 import Button from "../Button";
 
 interface ListingCardProps {
-  data: SafeLising;
-  reservation?: Reservation;
+  data: SafeListing;
+  reservation?: SafeReservation;
   onAction?: (id: string) => void;
   disabled?: boolean;
   actionLabel?: string;
@@ -75,7 +74,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
             col-span-1 cursor-pointer group
         "
     >
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col h-[100%] justify-between gap-2 w-full">
         <div
           className="
                     aspect-square
