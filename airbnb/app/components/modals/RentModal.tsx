@@ -63,7 +63,7 @@ const RentModal = () => {
   const roomCount = watch("roomCount");
   const bathroomCount = watch("bathroomCount");
   const imageSrc = watch("imageSrc");
-
+  /* eslint-disable */
   const Map = useMemo(
     () =>
       dynamic(() => import("../Map"), {
@@ -71,7 +71,7 @@ const RentModal = () => {
       }),
     [location]
   );
-
+  /* eslint-enable */
   const setCustomValue = (id: string, value: any) => {
     setValue(id, value, {
       shouldDirty: true,

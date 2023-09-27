@@ -37,7 +37,7 @@ const SearchModal = () => {
     endDate: new Date(),
     key: "selection",
   });
-
+  /* eslint-disable */
   const Map = useMemo(
     () =>
       dynamic(() => import("../Map"), {
@@ -45,7 +45,7 @@ const SearchModal = () => {
       }),
     [location]
   );
-
+  /* eslint-enable */
   const onBack = useCallback(() => {
     setStep((value) => value - 1);
   }, []);
@@ -120,7 +120,7 @@ const SearchModal = () => {
     }
 
     return "Back";
-  }, []);
+  }, [step]);
 
   let bodyContent = (
     <div className="flex flex-col gap-8">
